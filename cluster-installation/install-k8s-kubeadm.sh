@@ -6,7 +6,7 @@
 
 # VARIABLES
 ################################
-# K8S_VERSION=1.28.2-1.1                                # Needed for master and worker installation
+# K8S_VERSION=1.30.2-1.1                                # Needed for master and worker installation
 # CONTAINERD_VERSION=1.6.31-1                           # Needed for master and worker installation
 # IS_MASTER=true|false                                  # Needed for master and worker installation
 # MASTER_NODE_IP=x.x.x.x                        	    # Needed for master installation (not used in worker installation)

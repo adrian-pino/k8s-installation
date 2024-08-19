@@ -108,5 +108,9 @@ if $IS_MASTER; then
     # Untaint master node (in order to run workloads on it (comment it in case this is not the intended behaviour)
     kubectl taint nodes --all node-role.kubernetes.io/control-plane-
 else
+    echo ""
+    echo "***************************************************************************************************************
+    echo "Congratulations! at this point, Kubernetes elements should be installed within this node"
     echo "As a last step, please join the worker to the cluster (use the token obtained in the master after installing it"
+    echo "***************************************************************************************************************
 fi

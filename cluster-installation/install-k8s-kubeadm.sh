@@ -109,8 +109,8 @@ if $IS_MASTER; then
     kubectl taint nodes --all node-role.kubernetes.io/control-plane-
 else
     echo ""
-    echo "***************************************************************************************************************
+    echo "***************************************************************************************************************"
     echo "Congratulations! at this point, Kubernetes elements should be installed within this node"
     echo "As a last step, please join the worker to the cluster (use the token obtained in the master after installing it"
-    echo "***************************************************************************************************************
+    echo "***************************************************************************************************************"
 fi

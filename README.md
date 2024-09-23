@@ -1,3 +1,5 @@
+# Steps to provision a Kubernetes cluster
+
 First, clone the repo **inside each node** that conform the cluster:
 
 ```bash

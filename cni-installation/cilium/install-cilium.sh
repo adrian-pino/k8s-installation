@@ -3,7 +3,7 @@
 # VARIABLES
 ################################
 MASTER_NODE_IP=X.Y.Z.T
-POD_CIDR=A.B.C.D
+POD_CIDR=A.B.C.D/E
 ################################
 
 helm repo add cilium https://helm.cilium.io/

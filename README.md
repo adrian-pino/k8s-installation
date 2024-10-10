@@ -159,7 +159,7 @@ Now, if we check again the nodes, all the nodes on the cluster should look as `R
 ubuntu@test-vm-1:~/k8s-installation/cni-installation/cilium$ kubectl get nodes
 NAME        STATUS   ROLES           AGE    VERSION
 test-vm-1   Ready    control-plane   131m   v1.30.2
-test-vm-3   Ready    <none>          112m   v1.30.2
-test-vm2    Ready    <none>          116m   v1.30.2
+test-vm-2   Ready    <none>          112m   v1.30.2
+test-vm-3   Ready    <none>          116m   v1.30.2
 ```
 

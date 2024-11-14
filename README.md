@@ -131,6 +131,7 @@ Now, update the variables inside the `install-cilium.sh` script:
 ################################
 MASTER_NODE_IP=172.28.5.51
 POD_CIDR=172.25.0.0/16
+REPLICAS=2
 ################################
 ```
 

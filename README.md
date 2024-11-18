@@ -135,7 +135,7 @@ REPLICAS=2
 ################################
 ```
 
-Now, run the script in all the nodes:
+Now, run the script on the master node:
 
 ```
 ubuntu@test-vm-1:~/k8s-installation/cni-installation/cilium$ ./install-cilium.sh 

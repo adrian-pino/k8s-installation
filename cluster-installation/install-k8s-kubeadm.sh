@@ -111,6 +111,6 @@ else
     echo ""
     echo "***************************************************************************************************************"
     echo "Congratulations! at this point, Kubernetes elements should be installed within this node"
-    echo "As a last step, please join the worker to the cluster (use the token obtained in the master after installing it"
+    echo "As a last step, please join the worker to the cluster (use the token obtained in the master after installing it)"
     echo "***************************************************************************************************************"
 fi

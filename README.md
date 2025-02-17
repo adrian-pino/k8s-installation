@@ -18,8 +18,9 @@ First, set up variables from `install-k8s-kubeadm.sh` script. Those are the vari
 K8S_VERSION=1.30.2-1.1      # Needed for master and worker installation
 CONTAINERD_VERSION=1.6.31-1 # Needed for master and worker installation
 IS_MASTER=true              # Needed for master and worker installation
-MASTER_NODE_IP=172.28.5.51  # Needed for master installation (not used in worker installation)
-POD_CIDR=172.25.0.0/16      # Needed for master installation (not used in worker installation) -> Update it for each new cluster
+MASTER_NODE_IP=172.28.5.51 	# Needed for master installation (not used in worker installation)
+POD_CIDR=172.25.0.0/16     	# Needed for master installation (not used in worker installation). Recommendation: update it for each new cluster
+SERVICE_CIDR=10.96.0.0/12   # Needed for master installation (not used in worker installation). Recommendation: update it for each new cluster
 ################################
 ```
 
@@ -49,11 +50,12 @@ Now, let's install the worker. We run the same scripts but adjust the variables 
 ```bash
 # VARIABLES
 ################################
-K8S_VERSION=1.30.2-1.1                                # Needed for master and worker installation
-CONTAINERD_VERSION=1.6.31-1                           # Needed for master and worker installation
-IS_MASTER=false                                  # Needed for master and worker installation
-# MASTER_NODE_IP= X.X.X.X                                 # Needed for master installation (not used in worker installation)
-# POD_CIDR=X.X.X.X                                              # Needed for master installation (not used in worker installation) -> Update it for each new cluster
+K8S_VERSION=1.30.2-1.1      # Needed for master and worker installation
+CONTAINERD_VERSION=1.6.31-1 # Needed for master and worker installation
+IS_MASTER=false             # Needed for master and worker installation
+# MASTER_NODE_IP= X.X.X.X   # Needed for master installation (not used in worker installation)
+# POD_CIDR=X.X.X.X          # Needed for master installation (not used in worker installation). Recommendation: update it for each new cluster
+# SERVICE_CIDR=X.X.X.X      # Needed for master installation (not used in worker installation). Recommendation: update it for each new cluster
 ################################
 ```
 

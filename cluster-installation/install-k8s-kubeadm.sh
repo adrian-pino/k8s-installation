@@ -6,11 +6,12 @@
 
 # VARIABLES
 ################################
-# K8S_VERSION=1.30.2-1.1                                # Needed for master and worker installation
-# CONTAINERD_VERSION=1.6.31-1                           # Needed for master and worker installation
-# IS_MASTER=true|false                                  # Needed for master and worker installation
-# MASTER_NODE_IP=x.x.x.x                        	    # Needed for master installation (not used in worker installation)
-# POD_CIDR=172.12.0.0/16      				            # Needed for master installation (not used in worker installation) -> Update it for each new cluster
+# K8S_VERSION=1.30.2-1.1                    # Needed for master and worker installation
+# CONTAINERD_VERSION=1.6.31-1               # Needed for master and worker installation
+# IS_MASTER=true|false                      # Needed for master and worker installation
+# MASTER_NODE_IP=x.x.x.x                    # Needed for master installation (not used in worker installation)
+# POD_CIDR=172.12.0.0/16      				# Needed for master installation (not used in worker installation). Recommendation: update it for each new cluster
+# SERVICE_CIDR=10.96.0.0/12                 # Needed for master installation (not used in worker installation). Recommendation: update it for each new cluster
 ################################
 
 # Check if mandatory variables are missing
@@ -99,7 +100,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 if $IS_MASTER; then
     #--pod-network-cidr=$POD_CIDR
-    sudo kubeadm init --apiserver-advertise-address=$MASTER_NODE_IP --pod-network-cidr=$POD_CIDR
+    sudo kubeadm init --apiserver-advertise-address=$MASTER_NODE_IP --pod-network-cidr=$POD_CIDR --service-cidr=$SVC_CIDR
     # Once kubeadm has bootstraped the K8s cluster, set proper access to the cluster from the CP/master node
     mkdir -p "$HOME"/.kube
     sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
